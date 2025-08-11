@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnitude Labs — AI-Enabled Brand Accelerator</title>
+  <meta name="description" content="Magnitude Labs is the AI-enabled brand accelerator from Magnitude Agency. We build, break, and launch brands in real time using the F2 Framework — Flesh & Firmware." />
+  <meta property="og:title" content="Magnitude Labs — AI-Enabled Brand Accelerator" />
+  <meta property="og:description" content="Human instinct × machine speed. Proof-of-concept portfolio, CustomGPTs, AEO, and the F2 Framework (Flesh & Firmware)." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0c" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --panel:#111114;
+      --card:#15151a;
+      --muted:#a9a9b3;
+      --text:#f5f7fb;
+      --accent:#70e1ff;
+      --accent-2:#b67cff;
+      --ring: 0 0 0 3px rgba(112,225,255,.25);
+      --radius: 16px;
+      --shadow: 0 8px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 85% -10%, rgba(182,124,255,.12), transparent 60%), radial-gradient(900px 600px at -10% 10%, rgba(112,225,255,.12), transparent 60%), var(--bg); color:var(--text); font-family:Inter,system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height:1.5}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter: blur(8px); background:linear-gradient(180deg, rgba(11,11,12,.85), rgba(11,11,12,.50)); border-bottom:1px solid rgba(255,255,255,.05); z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo{width:36px;height:36px;border-radius:10px;background:conic-gradient(from 20deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow)}
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.4px}
+    nav a{color:var(--text);opacity:.85;margin-left:18px}
+    nav a:hover{opacity:1}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b0b0c;font-weight:700; box-shadow:var(--shadow)}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+    .btn-outline{border:1px solid rgba(255,255,255,.15); color:var(--text); padding:10px 16px; border-radius:12px}
+    .btn-outline:hover{background:rgba(255,255,255,.04); text-decoration:none}
+    .hero{padding:80px 0 40px}
+    .kicker{color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:12px}
+    .headline{font-size: clamp(32px, 6vw, 56px); line-height:1.05; margin:10px 0 14px; font-weight:800}
+    .sub{max-width:760px; color:var(--muted); font-size:18px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px}
+    section{padding:40px 0}
+    .section-title{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:8px}
+    .h2{font-size: clamp(24px, 4vw, 36px); margin:0 0 14px; font-weight:800}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+    .grid{display:grid; gap:16px}
+    @media(min-width:800px){ .grid-3{grid-template-columns: repeat(3, 1fr)} .grid-2{grid-template-columns: repeat(2, 1fr)}}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:18px; transition:.2s transform, .2s border-color}
+    .card:hover{transform:translateY(-3px); border-color: rgba(112,225,255,.25)}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); color:var(--muted); font-size:12px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:12px}
+    .muted{color:var(--muted)}
+    .list{margin:0; padding-left:18px}
+    .footer{padding:28px 0 60px; color:var(--muted); font-size:14px; border-top:1px solid rgba(255,255,255,.06)}
+    .pill{display:inline-block; padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:var(--muted); font-size:12px; margin-right:6px}
+    .flex{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Magnitude Labs home">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Magnitude Labs</h1>
+      </a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#explore">Explore</a>
+        <a href="#f2">F2 Framework</a>
+        <a href="#manifesto">Manifesto</a>
+        <a class="btn-outline" href="https://MagnitudeAgency.com" target="_blank" rel="noopener">MagnitudeAgency.com</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="badge">AI‑Enabled Brand Accelerator</div>
+      <h2 class="headline">AI‑Enabled Brand Acceleration</h2>
+      <p class="sub">Magnitude Labs builds, breaks, and launches brands in real time — using AI to collapse timelines, cut costs, and command the future. We move fast, test in public, and ship what works.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://MagnitudeAgency.com" target="_blank" rel="noopener" aria-label="Visit our parent agency, Magnitude Agency">Visit MagnitudeAgency.com</a>
+        <a class="btn-outline" href="#portfolio">See the portfolio ↓</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">About Labs</div>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3 class="h2">We’re not guessing. We’re building.</h3>
+          <p class="muted">Magnitude Labs is the experimental arm of Magnitude Agency — a place where brands are born in weeks, not years. We harness AI not as a replacement for people, but as a <strong>force multiplier</strong>. Humans bring the instinct, taste, and context. AI brings the speed, scale, and precision. Together, we make brands faster, smarter, and more profitable.</p>
+          <div class="flex" style="margin-top:10px">
+            <span class="pill">Speed-to-market</span>
+            <span class="pill">Creative automation</span>
+            <span class="pill">Audience-first</span>
+            <span class="pill">Test → Learn → Scale</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 class="h2">F2 Framework: Flesh &amp; Firmware</h3>
+          <p class="muted">It takes both… for now. Our AI collaborators — <strong>Bacon</strong>, <strong>June</strong>, and <strong>Maple</strong> — work side-by-side with human talent to push what’s possible. We don’t replace humans. We <em>speed them up</em>. Anyone still in AI denial? They’ll lose.</p>
+          <ul class="list">
+            <li><strong>Flesh:</strong> judgment, taste, narrative</li>
+            <li><strong>Firmware:</strong> scale, search, synthesis</li>
+            <li><strong>Together:</strong> durable brands launched at the speed of culture</li>
+          </ul>
+        </div>
+      
+<div class="panel">
+  <h3 class="h2">We’re builders.</h3>
+  <p class="muted">Magnitude Labs exists to explore how AI collapses timelines in brand building. We publish what works, retire what doesn’t, and spin out the winners with the Magnitude team.</p>
+  <p class="muted">We prototype real workflows, not hype. Magnitude Labs is where we test, break, and publish repeatable systems that make brands move faster—from research and positioning to content engines and measurement.</p>
+  <p class="muted"><strong>Part of Magnitude</strong> — a fast, forward‑thinking agency.</p>
+  <ul class="list">
+    <li><strong>Build faster, decide smarter</strong> — We turn strategy work into systems: research bots, pitch pack generators, and content pipelines that ship in days, not months.</li>
+    <li><strong>Hands‑on, not theoretical</strong> — Every lab drop includes repo links, prompts, and operators’ notes so teams can replicate or remix.</li>
+    <li><strong>Plug into the agency</strong> — When an idea proves out, Magnitude deploys it on real brands with real KPIs.</li>
+  </ul>
+</div>
+
+    </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-title">Proof of Concept</div>
+      <h3 class="h2">The Portfolio</h3>
+      <div class="grid grid-3">
+        <article class="card">
+          <h4>Kit‑Tents</h4>
+          <p class="muted">A DTC <em>cat kingdom</em> empire, delivered in a box.</p>
+        </article>
+        <article class="card">
+          <h4>It’s Dice</h4>
+          <p class="muted">The diabetic cow‑cat ruling the kingdom (and your feed). <a href="https://instagram.com/ItsDice" target="_blank" rel="noopener">@ItsDice</a></p>
+        </article>
+        <article class="card">
+          <h4>Now What?</h4>
+          <p class="muted">A self‑published book series hilariously unhelpful in life transitions.</p>
+        </article>
+        <article class="card">
+          <h4>City Chicks</h4>
+          <p class="muted">Backyard henfluencers with main‑character energy. <a href="https://instagram.com/CityChicksLife" target="_blank" rel="noopener">@CityChicksLife</a></p>
+        </article>
+        <article class="card">
+          <h4>Civic Steel</h4>
+          <p class="muted">A love letter to the steel holding up our cities. <a href="https://instagram.com/CivicSteel" target="_blank" rel="noopener">@CivicSteel</a></p>
+        </article>
+        <article class="card">
+          <h4>The King of the Flush</h4>
+          <p class="muted">AI’s reigning monarch of the throne. <a href="https://instagram.com/KingoftheFlush" target="_blank" rel="noopener">@KingoftheFlush</a></p>
+        </article>
+        <article class="card">
+          <h4>King Power Pods</h4>
+          <p class="muted">In development: blackwater maintenance with microbiologist swagger.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="explore">
+      <div class="section-title">Areas of Exploration</div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>CustomGPTs</h4>
+          <p class="muted">Proprietarily trained GPTs that create AI efficiency and drive down budgets across brand, content, and ops.</p>
+          <p class="mono muted">Use cases: pitch packs, value stories, sales enablement, research synthesis</p>
+        </div>
+        <div class="card">
+          <h4>Answer Engine Optimization (AEO)</h4>
+          <p class="muted">The counterstrike to AI’s attack on legacy SEO. We structure content for answer engines — not just search engines.</p>
+          <p class="mono muted">Moves: entity mapping, question graphs, retrieval‑ready content, structured data</p>
+        </div>
+        <div class="card">
+          <h4>Rapid Brand Deployment</h4>
+          <p class="muted">From zero to live audience in weeks. Tight feedback loops, staged bets, and public iteration.</p>
+        </div>
+        <div class="card">
+          <h4>AI‑Driven Content Loops</h4>
+          <p class="muted">Feedback‑powered storytelling that evolves daily and compounds reach.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="f2">
+      <div class="section-title">F2 Framework</div>
+      <div class="panel">
+        <h3 class="h2">Flesh &amp; Firmware — how we work</h3>
+        <p class="muted">The future belongs to those who know when to trust the <strong>flesh</strong> and when to unleash the <strong>firmware</strong>. People give brands soul. AI gives brands speed. Labs is where we make them dance together — testing, breaking, and learning what works so our partners can move first.</p>
+      </div>
+    </section>
+
+    <section id="manifesto">
+      <div class="section-title">Vision / Manifesto</div>
+      <div class="panel">
+        <ul class="list">
+          <li><strong>We believe</strong> in brands that launch at the speed of culture.</li>
+          <li><strong>We believe</strong> experiments should happen in public.</li>
+          <li><strong>We believe</strong> AI is a creative partner, not a threat.</li>
+          <li><strong>We believe</strong> the next decade belongs to those who build <em>now</em>.</li>
+        </ul>
+        <p style="margin-top:10px">Magnitude Labs exists to prove it.</p>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="panel" style="text-align:center">
+        <h3 class="h2" style="margin-bottom:8px">Want to see how this translates into client work?</h3>
+        <p class="muted" style="margin:0 0 16px">Magnitude Labs is the experimental arm of our client practice.</p>
+        <a class="btn" href="https://MagnitudeAgency.com" target="_blank" rel="noopener">Visit MagnitudeAgency.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="flex">
+      <span>© <span id="y"></span> Magnitude Labs</span>
+      <span class="pill">Flesh &amp; Firmware</span>
+      <span class="pill">Bacon • June • Maple</span>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
